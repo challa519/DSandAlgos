@@ -1,0 +1,40 @@
+package ds.sql;
+
+public class ThreeStacksWithSingleArray {
+	
+	static int stackSize = 10;
+	static int [] buffer = new int [stackSize * 3];
+	
+	// 3 stack pointers to keep track of the index of the top element
+	static int [] stackPointer = {-1, -1, -1};
+
+	public static void main(String[] args) throws Exception  {
+		System.out.println(absTopOfStack(0));
+	}
+	
+	static void push(int stackNum, int value) throws Exception {
+		/* Check that we have space for the next element */
+		if (stackPointer[stackNum] + 1 >= stackSize) { 
+			throw new Exception("Stack is full");
+		}
+		/* Increment stack pointer and then update top value*/		
+		stackPointer[stackNum]++;
+		buffer[absTopOfStack(stackNum)] = value;	
+	}
+
+
+	/* returns index of the top of the stack "stackNum", in absolute terms */
+	static int absTopOfStack(int stackNum) {
+		return stackNum * stackSize + stackPointer[stackNum];
+	}	
+	
+	static int pop(int stackNum){
+		int temp=0;
+		if (stackPointer[stackNum] + 1 == -1) { 
+			
+		}else{
+			
+		}
+		return temp;
+	}
+}

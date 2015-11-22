@@ -1,0 +1,6 @@
+package ds.sql;
+
+public class LinkList {
+	private Node head, tail;
+
+}
