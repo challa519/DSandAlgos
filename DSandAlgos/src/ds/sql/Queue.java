@@ -6,6 +6,7 @@ public class Queue {
 	int top, bottom=0;
 	private int a[]=new int[capacity];
 	
+	/*FIFO - First In First Out*/
 	public void push(int val){
 		if(top==capacity && bottom==0) return;
 		//if(top==capacity && bottom!=0) top
